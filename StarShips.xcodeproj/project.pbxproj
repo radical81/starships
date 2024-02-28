@@ -20,6 +20,8 @@
 		860182092B8F13150027E948 /* CollectionRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860182082B8F13150027E948 /* CollectionRetriever.swift */; };
 		8601820C2B8F13BC0027E948 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8601820B2B8F13BC0027E948 /* Loadable.swift */; };
 		8601820E2B8F143F0027E948 /* StarShipRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8601820D2B8F143F0027E948 /* StarShipRetriever.swift */; };
+		860182142B8F16E50027E948 /* ErrorWithMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860182132B8F16E50027E948 /* ErrorWithMessage.swift */; };
+		860182162B8F170A0027E948 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860182152B8F170A0027E948 /* APIError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		860182102B8F152D0027E948 /* hide-api-implementation.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "hide-api-implementation.md"; sourceTree = "<group>"; };
 		860182112B8F154E0027E948 /* wrap-response-in-loadable.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "wrap-response-in-loadable.md"; sourceTree = "<group>"; };
 		860182122B8F15AA0027E948 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		860182132B8F16E50027E948 /* ErrorWithMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorWithMessage.swift; sourceTree = "<group>"; };
+		860182152B8F170A0027E948 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				860182082B8F13150027E948 /* CollectionRetriever.swift */,
+				860182132B8F16E50027E948 /* ErrorWithMessage.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				8601820B2B8F13BC0027E948 /* Loadable.swift */,
+				860182152B8F170A0027E948 /* APIError.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -332,11 +338,13 @@
 				8601820E2B8F143F0027E948 /* StarShipRetriever.swift in Sources */,
 				860181D32B8F0D000027E948 /* HomeScreen.swift in Sources */,
 				8601820C2B8F13BC0027E948 /* Loadable.swift in Sources */,
+				860182162B8F170A0027E948 /* APIError.swift in Sources */,
 				860181FC2B8F0DFB0027E948 /* Ship.swift in Sources */,
 				860182092B8F13150027E948 /* CollectionRetriever.swift in Sources */,
 				860181D12B8F0D000027E948 /* StarShipsApp.swift in Sources */,
 				860182052B8F107E0027E948 /* ShipCollectionList.swift in Sources */,
 				860182032B8F106A0027E948 /* ShipCollectionItem.swift in Sources */,
+				860182142B8F16E50027E948 /* ErrorWithMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
