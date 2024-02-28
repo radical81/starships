@@ -22,6 +22,7 @@
 		8601820E2B8F143F0027E948 /* StarShipRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8601820D2B8F143F0027E948 /* StarShipRetriever.swift */; };
 		860182142B8F16E50027E948 /* ErrorWithMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860182132B8F16E50027E948 /* ErrorWithMessage.swift */; };
 		860182162B8F170A0027E948 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860182152B8F170A0027E948 /* APIError.swift */; };
+		860182182B8F18140027E948 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860182172B8F18140027E948 /* Response.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		860182122B8F15AA0027E948 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		860182132B8F16E50027E948 /* ErrorWithMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorWithMessage.swift; sourceTree = "<group>"; };
 		860182152B8F170A0027E948 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		860182172B8F18140027E948 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				860181FB2B8F0DFB0027E948 /* Ship.swift */,
+				860182172B8F18140027E948 /* Response.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				860181FC2B8F0DFB0027E948 /* Ship.swift in Sources */,
 				860182092B8F13150027E948 /* CollectionRetriever.swift in Sources */,
 				860181D12B8F0D000027E948 /* StarShipsApp.swift in Sources */,
+				860182182B8F18140027E948 /* Response.swift in Sources */,
 				860182052B8F107E0027E948 /* ShipCollectionList.swift in Sources */,
 				860182032B8F106A0027E948 /* ShipCollectionItem.swift in Sources */,
 				860182142B8F16E50027E948 /* ErrorWithMessage.swift in Sources */,
