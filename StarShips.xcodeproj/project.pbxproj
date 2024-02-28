@@ -56,6 +56,8 @@
 		860182082B8F13150027E948 /* CollectionRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionRetriever.swift; sourceTree = "<group>"; };
 		8601820B2B8F13BC0027E948 /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
 		8601820D2B8F143F0027E948 /* StarShipRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarShipRetriever.swift; sourceTree = "<group>"; };
+		860182102B8F152D0027E948 /* hide-api-implementation.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "hide-api-implementation.md"; sourceTree = "<group>"; };
+		860182112B8F154E0027E948 /* wrap-response-in-loadable.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "wrap-response-in-loadable.md"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 		860181CF2B8F0D000027E948 /* StarShips */ = {
 			isa = PBXGroup;
 			children = (
+				8601820F2B8F14E80027E948 /* Architecture Decisions */,
 				8601820A2B8F13AD0027E948 /* Enums */,
 				860181FA2B8F0DD90027E948 /* Models */,
 				860182062B8F12D20027E948 /* Protocols */,
@@ -183,6 +186,15 @@
 				8601820B2B8F13BC0027E948 /* Loadable.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		8601820F2B8F14E80027E948 /* Architecture Decisions */ = {
+			isa = PBXGroup;
+			children = (
+				860182102B8F152D0027E948 /* hide-api-implementation.md */,
+				860182112B8F154E0027E948 /* wrap-response-in-loadable.md */,
+			);
+			path = "Architecture Decisions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
