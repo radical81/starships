@@ -17,6 +17,9 @@
 		860181FC2B8F0DFB0027E948 /* Ship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860181FB2B8F0DFB0027E948 /* Ship.swift */; };
 		860182032B8F106A0027E948 /* ShipCollectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860182022B8F106A0027E948 /* ShipCollectionItem.swift */; };
 		860182052B8F107E0027E948 /* ShipCollectionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860182042B8F107E0027E948 /* ShipCollectionList.swift */; };
+		860182092B8F13150027E948 /* CollectionRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860182082B8F13150027E948 /* CollectionRetriever.swift */; };
+		8601820C2B8F13BC0027E948 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8601820B2B8F13BC0027E948 /* Loadable.swift */; };
+		8601820E2B8F143F0027E948 /* StarShipRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8601820D2B8F143F0027E948 /* StarShipRetriever.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,9 @@
 		860181FB2B8F0DFB0027E948 /* Ship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ship.swift; sourceTree = "<group>"; };
 		860182022B8F106A0027E948 /* ShipCollectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipCollectionItem.swift; sourceTree = "<group>"; };
 		860182042B8F107E0027E948 /* ShipCollectionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipCollectionList.swift; sourceTree = "<group>"; };
+		860182082B8F13150027E948 /* CollectionRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionRetriever.swift; sourceTree = "<group>"; };
+		8601820B2B8F13BC0027E948 /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
+		8601820D2B8F143F0027E948 /* StarShipRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarShipRetriever.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +106,10 @@
 		860181CF2B8F0D000027E948 /* StarShips */ = {
 			isa = PBXGroup;
 			children = (
+				8601820A2B8F13AD0027E948 /* Enums */,
 				860181FA2B8F0DD90027E948 /* Models */,
+				860182062B8F12D20027E948 /* Protocols */,
+				860182072B8F12D80027E948 /* Services */,
 				860181FD2B8F0FF10027E948 /* Views */,
 				860181D02B8F0D000027E948 /* StarShipsApp.swift */,
 				860181D42B8F0D060027E948 /* Assets.xcassets */,
@@ -150,6 +159,30 @@
 				860182042B8F107E0027E948 /* ShipCollectionList.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		860182062B8F12D20027E948 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				860182082B8F13150027E948 /* CollectionRetriever.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		860182072B8F12D80027E948 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8601820D2B8F143F0027E948 /* StarShipRetriever.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8601820A2B8F13AD0027E948 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				8601820B2B8F13BC0027E948 /* Loadable.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,8 +315,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8601820E2B8F143F0027E948 /* StarShipRetriever.swift in Sources */,
 				860181D32B8F0D000027E948 /* HomeScreen.swift in Sources */,
+				8601820C2B8F13BC0027E948 /* Loadable.swift in Sources */,
 				860181FC2B8F0DFB0027E948 /* Ship.swift in Sources */,
+				860182092B8F13150027E948 /* CollectionRetriever.swift in Sources */,
 				860181D12B8F0D000027E948 /* StarShipsApp.swift in Sources */,
 				860182052B8F107E0027E948 /* ShipCollectionList.swift in Sources */,
 				860182032B8F106A0027E948 /* ShipCollectionItem.swift in Sources */,
