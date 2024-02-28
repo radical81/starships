@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		860181D12B8F0D000027E948 /* StarShipsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860181D02B8F0D000027E948 /* StarShipsApp.swift */; };
-		860181D32B8F0D000027E948 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860181D22B8F0D000027E948 /* ContentView.swift */; };
+		860181D32B8F0D000027E948 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860181D22B8F0D000027E948 /* HomeScreen.swift */; };
 		860181D52B8F0D060027E948 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 860181D42B8F0D060027E948 /* Assets.xcassets */; };
 		860181D82B8F0D060027E948 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 860181D72B8F0D060027E948 /* Preview Assets.xcassets */; };
 		860181E22B8F0D070027E948 /* StarShipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860181E12B8F0D070027E948 /* StarShipsTests.swift */; };
 		860181EC2B8F0D070027E948 /* StarShipsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860181EB2B8F0D070027E948 /* StarShipsUITests.swift */; };
 		860181EE2B8F0D070027E948 /* StarShipsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860181ED2B8F0D070027E948 /* StarShipsUITestsLaunchTests.swift */; };
+		860181FC2B8F0DFB0027E948 /* Ship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860181FB2B8F0DFB0027E948 /* Ship.swift */; };
+		860182032B8F106A0027E948 /* ShipCollectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860182022B8F106A0027E948 /* ShipCollectionItem.swift */; };
+		860182052B8F107E0027E948 /* ShipCollectionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860182042B8F107E0027E948 /* ShipCollectionList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,7 @@
 /* Begin PBXFileReference section */
 		860181CD2B8F0D000027E948 /* StarShips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarShips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		860181D02B8F0D000027E948 /* StarShipsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarShipsApp.swift; sourceTree = "<group>"; };
-		860181D22B8F0D000027E948 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		860181D22B8F0D000027E948 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		860181D42B8F0D060027E948 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		860181D72B8F0D060027E948 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		860181DD2B8F0D070027E948 /* StarShipsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarShipsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +47,9 @@
 		860181E72B8F0D070027E948 /* StarShipsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarShipsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		860181EB2B8F0D070027E948 /* StarShipsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarShipsUITests.swift; sourceTree = "<group>"; };
 		860181ED2B8F0D070027E948 /* StarShipsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarShipsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		860181FB2B8F0DFB0027E948 /* Ship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ship.swift; sourceTree = "<group>"; };
+		860182022B8F106A0027E948 /* ShipCollectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipCollectionItem.swift; sourceTree = "<group>"; };
+		860182042B8F107E0027E948 /* ShipCollectionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipCollectionList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +100,9 @@
 		860181CF2B8F0D000027E948 /* StarShips */ = {
 			isa = PBXGroup;
 			children = (
+				860181FA2B8F0DD90027E948 /* Models */,
+				860181FD2B8F0FF10027E948 /* Views */,
 				860181D02B8F0D000027E948 /* StarShipsApp.swift */,
-				860181D22B8F0D000027E948 /* ContentView.swift */,
 				860181D42B8F0D060027E948 /* Assets.xcassets */,
 				860181D62B8F0D060027E948 /* Preview Content */,
 			);
@@ -125,6 +132,24 @@
 				860181ED2B8F0D070027E948 /* StarShipsUITestsLaunchTests.swift */,
 			);
 			path = StarShipsUITests;
+			sourceTree = "<group>";
+		};
+		860181FA2B8F0DD90027E948 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				860181FB2B8F0DFB0027E948 /* Ship.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		860181FD2B8F0FF10027E948 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				860181D22B8F0D000027E948 /* HomeScreen.swift */,
+				860182022B8F106A0027E948 /* ShipCollectionItem.swift */,
+				860182042B8F107E0027E948 /* ShipCollectionList.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +282,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				860181D32B8F0D000027E948 /* ContentView.swift in Sources */,
+				860181D32B8F0D000027E948 /* HomeScreen.swift in Sources */,
+				860181FC2B8F0DFB0027E948 /* Ship.swift in Sources */,
 				860181D12B8F0D000027E948 /* StarShipsApp.swift in Sources */,
+				860182052B8F107E0027E948 /* ShipCollectionList.swift in Sources */,
+				860182032B8F106A0027E948 /* ShipCollectionItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
