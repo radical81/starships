@@ -58,6 +58,7 @@
 		8601820D2B8F143F0027E948 /* StarShipRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarShipRetriever.swift; sourceTree = "<group>"; };
 		860182102B8F152D0027E948 /* hide-api-implementation.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "hide-api-implementation.md"; sourceTree = "<group>"; };
 		860182112B8F154E0027E948 /* wrap-response-in-loadable.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "wrap-response-in-loadable.md"; sourceTree = "<group>"; };
+		860182122B8F15AA0027E948 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +118,7 @@
 				860181D02B8F0D000027E948 /* StarShipsApp.swift */,
 				860181D42B8F0D060027E948 /* Assets.xcassets */,
 				860181D62B8F0D060027E948 /* Preview Content */,
+				860182122B8F15AA0027E948 /* README.md */,
 			);
 			path = StarShips;
 			sourceTree = "<group>";
