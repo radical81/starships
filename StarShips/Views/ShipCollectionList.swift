@@ -2,16 +2,28 @@ import SwiftUI
 
 /// The list of ships.
 struct ShipCollectionList: View {
-    @State var shipList: [Ship] = [Ship(name: "Millenium", model: "Falcon"),
-                                   Ship(name: "Star", model: "Destroyer")]
-    var body: some View {
-      List(shipList) {
-        ShipCollectionItem(ship: $0)
-      }
-      .padding()
+  /// Store the data when fetched to a state var.
+  @State var dataForLoading: Loadable<[Ship]> = .notLoaded
+  /// The view model will be a computed property that uses the latest data.
+  var viewModel: ShipCollectionViewModel {
+    ShipCollectionViewModel(dataForLoading)
+  }
+  /// The API service
+  let dataFetcher = StarShipRetriever()
+  
+  var body: some View {
+    List(viewModel.ships) {
+      ShipCollectionItem(ship: $0)
     }
+    .padding()
+    .onAppear {
+      Task {
+        dataForLoading = await dataFetcher.fetchCollection()
+      }
+    }
+  }
 }
 
 #Preview {
-    ShipCollectionList()
+  ShipCollectionList()
 }
