@@ -23,6 +23,7 @@ struct ShipCollectionList: View {
       }
       listDisplay
     }
+    .padding()
     .onAppear {
       Task {
         dataForLoading = .loading
@@ -45,10 +46,17 @@ struct ShipCollectionList: View {
   }
   
   var listDisplay: some View {
-    List(viewModel.ships) {
-      ShipCollectionItem(ship: $0)
-    }
-    .padding()
+    NavigationSplitView {
+      List(viewModel.ships) { ship in
+        NavigationLink {
+            ShipDetails()
+        } label: {
+            ShipCollectionItem(ship: ship)
+        }
+      }
+    } detail: {
+      Text("Select a star ship.")
+    }   
   }
 }
 
