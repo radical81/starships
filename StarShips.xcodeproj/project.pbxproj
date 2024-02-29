@@ -23,6 +23,7 @@
 		860182142B8F16E50027E948 /* ErrorWithMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860182132B8F16E50027E948 /* ErrorWithMessage.swift */; };
 		860182162B8F170A0027E948 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860182152B8F170A0027E948 /* APIError.swift */; };
 		860182182B8F18140027E948 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860182172B8F18140027E948 /* Response.swift */; };
+		8601821B2B9052460027E948 /* ShipCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8601821A2B9052460027E948 /* ShipCollectionViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		860182132B8F16E50027E948 /* ErrorWithMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorWithMessage.swift; sourceTree = "<group>"; };
 		860182152B8F170A0027E948 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		860182172B8F18140027E948 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		8601821A2B9052460027E948 /* ShipCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipCollectionViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				860182072B8F12D80027E948 /* Services */,
 				860181FD2B8F0FF10027E948 /* Views */,
 				860181D02B8F0D000027E948 /* StarShipsApp.swift */,
+				860182192B90522C0027E948 /* ViewModels */,
 				860181D42B8F0D060027E948 /* Assets.xcassets */,
 				860181D62B8F0D060027E948 /* Preview Content */,
 				860182122B8F15AA0027E948 /* README.md */,
@@ -206,6 +209,14 @@
 				860182112B8F154E0027E948 /* wrap-response-in-loadable.md */,
 			);
 			path = "Architecture Decisions";
+			sourceTree = "<group>";
+		};
+		860182192B90522C0027E948 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8601821A2B9052460027E948 /* ShipCollectionViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,6 +357,7 @@
 				860182092B8F13150027E948 /* CollectionRetriever.swift in Sources */,
 				860181D12B8F0D000027E948 /* StarShipsApp.swift in Sources */,
 				860182182B8F18140027E948 /* Response.swift in Sources */,
+				8601821B2B9052460027E948 /* ShipCollectionViewModel.swift in Sources */,
 				860182052B8F107E0027E948 /* ShipCollectionList.swift in Sources */,
 				860182032B8F106A0027E948 /* ShipCollectionItem.swift in Sources */,
 				860182142B8F16E50027E948 /* ErrorWithMessage.swift in Sources */,
