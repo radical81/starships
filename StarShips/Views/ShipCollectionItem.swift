@@ -8,6 +8,7 @@ struct ShipCollectionItem: View {
   var body: some View {
     HStack {
       Text(ship.name)
+      Spacer()
       Text(ship.model)
     }
   }
