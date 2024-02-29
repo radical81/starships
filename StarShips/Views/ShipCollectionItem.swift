@@ -14,5 +14,5 @@ struct ShipCollectionItem: View {
 }
 
 #Preview {
-  ShipCollectionItem(ship: Ship(id: "1", name: "Ship", model: "Mini"))
+  ShipCollectionItem(ship: Ship(name: "Ship", model: "Mini"))
 }
