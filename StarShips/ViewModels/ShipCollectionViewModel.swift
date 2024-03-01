@@ -1,5 +1,6 @@
 import Foundation
 
+/// Represents the data source for the ship collection view.
 struct ShipCollectionViewModel {
   var dataForLoading: Loadable<[Ship]>
   
