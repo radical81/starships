@@ -2,8 +2,8 @@ import SwiftUI
 
 /// Displays an item in the list of ships.
 struct ShipCollectionItem: View {
-  
-  @State var ship: Ship
+  /// The data for the ship in the list.
+  var ship: Ship
   
   var body: some View {
     HStack {

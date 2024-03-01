@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ShipDetails: View {
   /// The data for the ship details.
-  @State var ship: Ship
+  var ship: Ship
   /// The view model for this view.
   var viewModel: ShipDetailsViewModel {
     ShipDetailsViewModel(ship)
