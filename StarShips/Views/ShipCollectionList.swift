@@ -4,6 +4,8 @@ import SwiftUI
 struct ShipCollectionList: View {
   /// Store the data when fetched to a state var.
   @State var dataForLoading: Loadable<[Ship]> = .notLoaded
+  /// Store the user favourite selections.
+  @State private var favourites = Set<UUID>()
   /// The view model will be a computed property that uses the latest data.
   var viewModel: ShipCollectionViewModel {
     ShipCollectionViewModel(dataForLoading)
@@ -13,8 +15,6 @@ struct ShipCollectionList: View {
   
   var body: some View {
     VStack(spacing: 10) {
-      Text("Star Ships")
-        .font(.title)
       if viewModel.isWaiting {
         fetchingDisplay
       }
@@ -47,13 +47,15 @@ struct ShipCollectionList: View {
   
   var listDisplay: some View {
     NavigationSplitView {
-      List(viewModel.ships) { ship in
+      List(viewModel.ships, selection: $favourites) { ship in
         NavigationLink {
           ShipDetails(ship: ship)
         } label: {
             ShipCollectionItem(ship: ship)
         }
       }
+      .navigationTitle("Star Ships")
+      .navigationBarTitleDisplayMode(.inline)
     } detail: {
       Text("Select a star ship.")
     }
