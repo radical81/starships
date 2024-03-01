@@ -49,14 +49,14 @@ struct ShipCollectionList: View {
     NavigationSplitView {
       List(viewModel.ships) { ship in
         NavigationLink {
-            ShipDetails()
+          ShipDetails(ship: ship)
         } label: {
             ShipCollectionItem(ship: ship)
         }
       }
     } detail: {
       Text("Select a star ship.")
-    }   
+    }
   }
 }
 

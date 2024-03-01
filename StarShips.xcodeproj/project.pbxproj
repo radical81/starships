@@ -25,6 +25,7 @@
 		860182182B8F18140027E948 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860182172B8F18140027E948 /* Response.swift */; };
 		8601821B2B9052460027E948 /* ShipCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8601821A2B9052460027E948 /* ShipCollectionViewModel.swift */; };
 		8601821F2B90B2F20027E948 /* ShipDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8601821E2B90B2F20027E948 /* ShipDetails.swift */; };
+		860182212B9182DD0027E948 /* ShipDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860182202B9182DD0027E948 /* ShipDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		860182172B8F18140027E948 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		8601821A2B9052460027E948 /* ShipCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipCollectionViewModel.swift; sourceTree = "<group>"; };
 		8601821E2B90B2F20027E948 /* ShipDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipDetails.swift; sourceTree = "<group>"; };
+		860182202B9182DD0027E948 /* ShipDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipDetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				8601821A2B9052460027E948 /* ShipCollectionViewModel.swift */,
+				860182202B9182DD0027E948 /* ShipDetailsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8601820E2B8F143F0027E948 /* StarShipRetriever.swift in Sources */,
+				860182212B9182DD0027E948 /* ShipDetailsViewModel.swift in Sources */,
 				8601821F2B90B2F20027E948 /* ShipDetails.swift in Sources */,
 				860181D32B8F0D000027E948 /* HomeScreen.swift in Sources */,
 				8601820C2B8F13BC0027E948 /* Loadable.swift in Sources */,

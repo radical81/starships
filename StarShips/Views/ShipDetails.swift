@@ -8,11 +8,23 @@
 import SwiftUI
 
 struct ShipDetails: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+  /// The data for the ship details.
+  @State var ship: Ship
+  /// The view model for this view.
+  var viewModel: ShipDetailsViewModel {
+    ShipDetailsViewModel(ship)
+  }
+  
+  var body: some View {
+    VStack {
+      Text(viewModel.name)
+        .font(.headline)
+      Text(viewModel.model)
+        .font(.subheadline)
     }
+  }
 }
 
 #Preview {
-    ShipDetails()
+  ShipDetails(ship: Ship(name: "Test", model: "Generic"))
 }
