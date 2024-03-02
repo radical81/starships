@@ -18,18 +18,48 @@ struct ShipDetails: View {
   }
   
   var body: some View {
-    VStack {
-      Text(viewModel.name)
-        .font(.headline)
-      Text(viewModel.model)
-        .font(.subheadline)
-      Text(viewModel.madeBy)
-        .font(.subheadline)
-      Text(viewModel.shipClass)
-        .font(.subheadline)
-      favouriteIndicator
+    VStack(alignment: .leading) {
+      Spacer()
+      HStack {
+        Text("Name")
+          .font(.headline)
+          .fontWeight(.bold)
+        Spacer()
+        Text(viewModel.name)
+          .font(.headline)
+      }
+      HStack {
+        Text("Model")
+          .font(.subheadline)
+          .fontWeight(.bold)
+        Spacer()
+        Text(viewModel.model)
+          .font(.subheadline)
+      }
+      HStack {
+        Text("Manufacturer")
+          .font(.subheadline)
+          .fontWeight(.bold)
+        Spacer()
+        Text(viewModel.madeBy)
+          .font(.subheadline)
+      }
+      HStack {
+        Text("Starship Class")
+          .font(.subheadline)
+          .fontWeight(.bold)
+        Spacer()
+        Text(viewModel.shipClass)
+          .font(.subheadline)
+      }
+      HStack {
+        Spacer()
+        favouriteIndicator
+        Spacer()
+      }
       Spacer()
     }
+    .padding()
   }
   
   var favouriteIndicator: some View {
