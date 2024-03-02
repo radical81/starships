@@ -2,8 +2,6 @@ import SwiftUI
 
 /// The list of ships.
 struct ShipCollectionList: View {
-  /// Edit mode binding
-  @Environment(\.editMode) private var editMode
   /// Store the data when fetched to a state var.
   @State var dataForLoading: Loadable<[Ship]> = .notLoaded
   /// Store the user favourite selections.
