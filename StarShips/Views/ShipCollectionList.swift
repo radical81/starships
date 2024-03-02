@@ -48,7 +48,7 @@ struct ShipCollectionList: View {
     NavigationStack {
       List(viewModel.ships) { ship in
         NavigationLink {
-          ShipDetails(ship: ship)
+          ShipDetails(ship: ship, favourites: $favourites)
         } label: {
             ShipCollectionItem(ship: ship)
         }
