@@ -26,6 +26,7 @@
 		8601821B2B9052460027E948 /* ShipCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8601821A2B9052460027E948 /* ShipCollectionViewModel.swift */; };
 		8601821F2B90B2F20027E948 /* ShipDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8601821E2B90B2F20027E948 /* ShipDetails.swift */; };
 		860182212B9182DD0027E948 /* ShipDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860182202B9182DD0027E948 /* ShipDetailsViewModel.swift */; };
+		860182242B92D8D40027E948 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860182232B92D8D40027E948 /* ViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		8601821A2B9052460027E948 /* ShipCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipCollectionViewModel.swift; sourceTree = "<group>"; };
 		8601821E2B90B2F20027E948 /* ShipDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipDetails.swift; sourceTree = "<group>"; };
 		860182202B9182DD0027E948 /* ShipDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipDetailsViewModel.swift; sourceTree = "<group>"; };
+		860182232B92D8D40027E948 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 			children = (
 				8601820F2B8F14E80027E948 /* Architecture Decisions */,
 				8601820A2B8F13AD0027E948 /* Enums */,
+				860182222B92D8BD0027E948 /* Extensions */,
 				860181FA2B8F0DD90027E948 /* Models */,
 				860182062B8F12D20027E948 /* Protocols */,
 				860182072B8F12D80027E948 /* Services */,
@@ -223,6 +226,14 @@
 				860182202B9182DD0027E948 /* ShipDetailsViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		860182222B92D8BD0027E948 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				860182232B92D8D40027E948 /* ViewExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,6 +375,7 @@
 				860181FC2B8F0DFB0027E948 /* Ship.swift in Sources */,
 				860182092B8F13150027E948 /* CollectionRetriever.swift in Sources */,
 				860181D12B8F0D000027E948 /* StarShipsApp.swift in Sources */,
+				860182242B92D8D40027E948 /* ViewExtension.swift in Sources */,
 				860182182B8F18140027E948 /* Response.swift in Sources */,
 				8601821B2B9052460027E948 /* ShipCollectionViewModel.swift in Sources */,
 				860182052B8F107E0027E948 /* ShipCollectionList.swift in Sources */,
