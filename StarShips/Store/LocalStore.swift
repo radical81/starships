@@ -56,4 +56,9 @@ struct LocalStore: Storage {
       print("Error encoding ship. (\(error)")
     }
   }
+  
+  /// True if ship is in the collection
+  func isFavourite(_ ship: Ship) -> Bool {
+    favouriteShips.contains(ship)    
+  }
 }
