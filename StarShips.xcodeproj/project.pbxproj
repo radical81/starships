@@ -27,6 +27,9 @@
 		8601821F2B90B2F20027E948 /* ShipDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8601821E2B90B2F20027E948 /* ShipDetails.swift */; };
 		860182212B9182DD0027E948 /* ShipDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860182202B9182DD0027E948 /* ShipDetailsViewModel.swift */; };
 		860182242B92D8D40027E948 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860182232B92D8D40027E948 /* ViewExtension.swift */; };
+		860182262B92E8230027E948 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860182252B92E8230027E948 /* Storage.swift */; };
+		860182292B92E9210027E948 /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860182282B92E9210027E948 /* LocalStore.swift */; };
+		8601822B2B92EB3E0027E948 /* StoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8601822A2B92EB3E0027E948 /* StoreError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,9 @@
 		8601821E2B90B2F20027E948 /* ShipDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipDetails.swift; sourceTree = "<group>"; };
 		860182202B9182DD0027E948 /* ShipDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipDetailsViewModel.swift; sourceTree = "<group>"; };
 		860182232B92D8D40027E948 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		860182252B92E8230027E948 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		860182282B92E9210027E948 /* LocalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
+		8601822A2B92EB3E0027E948 /* StoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +135,7 @@
 				860181FA2B8F0DD90027E948 /* Models */,
 				860182062B8F12D20027E948 /* Protocols */,
 				860182072B8F12D80027E948 /* Services */,
+				860182272B92E9070027E948 /* Store */,
 				860181FD2B8F0FF10027E948 /* Views */,
 				860181D02B8F0D000027E948 /* StarShipsApp.swift */,
 				860182192B90522C0027E948 /* ViewModels */,
@@ -189,6 +196,8 @@
 			children = (
 				860182082B8F13150027E948 /* CollectionRetriever.swift */,
 				860182132B8F16E50027E948 /* ErrorWithMessage.swift */,
+				860182252B92E8230027E948 /* Storage.swift */,
+				8601822A2B92EB3E0027E948 /* StoreError.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -234,6 +243,14 @@
 				860182232B92D8D40027E948 /* ViewExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		860182272B92E9070027E948 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				860182282B92E9210027E948 /* LocalStore.swift */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,6 +388,8 @@
 				8601821F2B90B2F20027E948 /* ShipDetails.swift in Sources */,
 				860181D32B8F0D000027E948 /* HomeScreen.swift in Sources */,
 				8601820C2B8F13BC0027E948 /* Loadable.swift in Sources */,
+				860182292B92E9210027E948 /* LocalStore.swift in Sources */,
+				8601822B2B92EB3E0027E948 /* StoreError.swift in Sources */,
 				860182162B8F170A0027E948 /* APIError.swift in Sources */,
 				860181FC2B8F0DFB0027E948 /* Ship.swift in Sources */,
 				860182092B8F13150027E948 /* CollectionRetriever.swift in Sources */,
@@ -379,6 +398,7 @@
 				860182182B8F18140027E948 /* Response.swift in Sources */,
 				8601821B2B9052460027E948 /* ShipCollectionViewModel.swift in Sources */,
 				860182052B8F107E0027E948 /* ShipCollectionList.swift in Sources */,
+				860182262B92E8230027E948 /* Storage.swift in Sources */,
 				860182032B8F106A0027E948 /* ShipCollectionItem.swift in Sources */,
 				860182142B8F16E50027E948 /* ErrorWithMessage.swift in Sources */,
 			);
