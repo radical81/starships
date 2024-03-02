@@ -2,10 +2,10 @@ import SwiftUI
 
 /// The list of ships.
 struct ShipCollectionList: View {
+  /// Persistent storage of favourite ships.
+  @State var favourites: [Ship] = Shared.storage.favouriteShips
   /// Store the data when fetched to a state var.
   @State var dataForLoading: Loadable<[Ship]> = .notLoaded
-  /// Store the user favourite selections.
-  @State private var favourites = Set<UUID>()
   /// The view model will be a computed property that uses the latest data.
   var viewModel: ShipCollectionViewModel {
     ShipCollectionViewModel(dataForLoading)
@@ -27,6 +27,7 @@ struct ShipCollectionList: View {
         dataForLoading = .loading
         dataForLoading = await Shared.DataFetcher.fetchCollection()
       }
+      print(Shared.storage.favouriteShips)
     }
   }
   
@@ -52,9 +53,9 @@ struct ShipCollectionList: View {
             ShipCollectionItem(ship: ship)
         }
         .swipeActions {
-          markFavourite(ship.id)
+          toggleFavourite(ship)
         }
-        .if(favourites.contains(ship.id)) { view in
+        .if(isFavourite(ship)) { view in
           view.background(Color.cyan)
         }
       }
@@ -64,20 +65,31 @@ struct ShipCollectionList: View {
   }
   
   // MARK: - Methods
-  func markFavourite(_ id: UUID) -> some View {
+  func toggleFavourite(_ ship: Ship) -> some View {
     Button(action: {
-      if favourites.contains(id) {
-        favourites.remove(id)
+      if isFavourite(ship) {
+        favourites.removeAll{ $0.id == ship.id }
+        Shared.storage.deleteShip(ship) // Unmark favourite
       } else {
-        favourites.insert(id)
-      }      
+        do {
+          favourites.append(ship)
+          try Shared.storage.saveShip(ship) // Mark favourite
+        } catch {
+          print("An error has occured.")
+        }
+      }
     }) {
-      if favourites.contains(id) {
-        Image(systemName: "heart.slash")
+      if isFavourite(ship) {
+        Image(systemName: "heart.slash") // Unmark favourite button
       } else {
-        Image(systemName: "heart")
+        Image(systemName: "heart") // Mark favourite button
       }
     }
+  }
+  
+  /// True if the ship is a favourite.
+  func isFavourite(_ ship: Ship) -> Bool {
+    favourites.contains(ship)
   }
 }
 

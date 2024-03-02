@@ -14,8 +14,5 @@ protocol Storage {
   func saveShip(_ ship: Ship) throws
 
   /// Delete favourite ship
-  func deleteShip(_ ship: Ship)
-  
-  /// True if ship is in the collection
-  func isFavourite(_ ship: Ship) -> Bool
+  func deleteShip(_ ship: Ship)  
 }
