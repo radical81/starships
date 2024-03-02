@@ -49,14 +49,14 @@ struct ShipCollectionList: View {
   
   var listDisplay: some View {
     NavigationStack {
-      List(viewModel.ships, selection: $favourites) { ship in
+      List(viewModel.ships) { ship in
         NavigationLink {
           ShipDetails(ship: ship)
         } label: {
             ShipCollectionItem(ship: ship)
-            .swipeActions {
-              markFavourite(ship.id)
-            }
+        }
+        .swipeActions {
+          markFavourite(ship.id)
         }
         .if(favourites.contains(ship.id)) { view in
           view.background(Color.cyan)
@@ -70,9 +70,17 @@ struct ShipCollectionList: View {
   // MARK: - Methods
   func markFavourite(_ id: UUID) -> some View {
     Button(action: {
-      favourites.insert(id)
+      if favourites.contains(id) {
+        favourites.remove(id)
+      } else {
+        favourites.insert(id)
+      }      
     }) {
-      Image(systemName: "heart.fill")
+      if favourites.contains(id) {
+        Image(systemName: "heart.slash")
+      } else {
+        Image(systemName: "heart")
+      }
     }
   }
 }
