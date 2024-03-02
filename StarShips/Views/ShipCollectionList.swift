@@ -10,7 +10,7 @@ struct ShipCollectionList: View {
   @State var dataForLoading: Loadable<[Ship]> = .notLoaded
   /// The view model will be a computed property that uses the latest data.
   var viewModel: ShipCollectionViewModel {
-    ShipCollectionViewModel(dataForLoading, favourites: favourites, sortBy: sortOption)
+    ShipCollectionViewModel($dataForLoading, favourites: favourites, sortBy: sortOption)
   }
   
   var body: some View {
@@ -26,8 +26,7 @@ struct ShipCollectionList: View {
     .padding()
     .onAppear {
       Task {
-        dataForLoading = .loading
-        dataForLoading = await Shared.DataFetcher.fetchCollection()
+        await viewModel.fetchData()
       }
       print(Shared.storage.favouriteShips)
     }
