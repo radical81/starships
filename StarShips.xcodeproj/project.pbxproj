@@ -87,6 +87,7 @@
 		860182302B9358A40027E948 /* SortOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortOption.swift; sourceTree = "<group>"; };
 		860182322B935D390027E948 /* use-async-await.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "use-async-await.md"; sourceTree = "<group>"; };
 		860182332B935D780027E948 /* store-userdefaults.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "store-userdefaults.md"; sourceTree = "<group>"; };
+		860182342B935FD00027E948 /* use-heart-for-favourite.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "use-heart-for-favourite.md"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +237,7 @@
 				860182112B8F154E0027E948 /* wrap-response-in-loadable.md */,
 				860182322B935D390027E948 /* use-async-await.md */,
 				860182332B935D780027E948 /* store-userdefaults.md */,
+				860182342B935FD00027E948 /* use-heart-for-favourite.md */,
 			);
 			path = "Architecture Decisions";
 			sourceTree = "<group>";

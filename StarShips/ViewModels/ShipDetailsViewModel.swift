@@ -29,7 +29,7 @@ struct ShipDetailsViewModel {
   }
   /// Indicator for whether the ship is a favourite.
   var favouriteImage: Image {
-    let imageName = favourites.contains(ship) ? "heart" : "heart.slash"
+    let imageName = favourites.contains(ship) ? "heart.slash" : "heart"
     return Image(systemName: imageName)
   }
 }
