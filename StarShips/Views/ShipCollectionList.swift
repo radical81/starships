@@ -68,15 +68,9 @@ struct ShipCollectionList: View {
   func toggleFavourite(_ ship: Ship) -> some View {
     Button(action: {
       if isFavourite(ship) {
-        favourites.removeAll{ $0.id == ship.id }
-        Shared.storage.deleteShip(ship) // Unmark favourite
+        favourites.removeAllWithStore { $0 == ship }
       } else {
-        do {
-          favourites.append(ship)
-          try Shared.storage.saveShip(ship) // Mark favourite
-        } catch {
-          print("An error has occured.")
-        }
+        favourites.appendWithStore(ship)
       }
     }) {
       if isFavourite(ship) {

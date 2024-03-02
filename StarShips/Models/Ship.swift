@@ -35,3 +35,26 @@ extension Ship: Equatable {
     lhs.id == rhs.id
   }
 }
+
+// MARK: - Array extension
+extension Array where Element == Ship {
+  /// Extends removeAll() but also removes it from local store.
+  mutating func removeAllWithStore(where shouldBeRemoved: (Element) throws -> Bool) rethrows {
+    if let ship = try self.first(where: shouldBeRemoved) {
+      Shared.storage.deleteShip(ship)
+    }
+    try self.removeAll(where: shouldBeRemoved)
+  }
+  
+  /// Extends append() but also adds it to local store.
+  mutating func appendWithStore(_ newElement: Element) {
+    self.append(newElement)
+    do {
+      try Shared.storage.saveShip(newElement)
+    } catch StoreError.saveFailed(let message) {
+      print(message)
+    } catch {
+      print("An unknown error has occured.")
+    }
+  }
+}
