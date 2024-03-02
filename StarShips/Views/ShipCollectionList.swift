@@ -13,13 +13,13 @@ struct ShipCollectionList: View {
   
   var body: some View {
     VStack(spacing: 10) {
-      if viewModel.isWaiting {
-        fetchingDisplay
-      }
       if viewModel.isError {
         errorDisplay
       }
       listDisplay
+      if viewModel.isWaiting {
+        fetchingDisplay
+      }
     }
     .padding()
     .onAppear {
@@ -32,9 +32,10 @@ struct ShipCollectionList: View {
   }
   
   var fetchingDisplay: some View {
-    VStack {
+    VStack {      
       Text("Fetching star ships...")
       ProgressView()
+      Spacer()
     }
   }
   
