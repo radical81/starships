@@ -8,11 +8,15 @@ struct Ship: Identifiable, Codable {
   }
   var name: String
   var model: String
+  var manufacturer: String
+  var starshipClass: String
   
   /// Create instance with properties.
-  init(name: String, model: String) {
+  init(name: String, model: String, manufacturer: String, starShipClass: String) {
     self.name = name
     self.model = model
+    self.manufacturer = manufacturer
+    self.starshipClass = starShipClass
   }
   
   /// Use to decode from JSON.
@@ -20,10 +24,12 @@ struct Ship: Identifiable, Codable {
     let values = try decoder.container(keyedBy: CodingKeys.self)
     name = try values.decode(String.self, forKey: .name)
     model = try values.decode(String.self, forKey: .model)
+    manufacturer = try values.decode(String.self, forKey: .manufacturer)
+    starshipClass = try values.decode(String.self, forKey: .starshipClass)
   }
   
   enum CodingKeys: String, CodingKey {
-    case name, model
+    case name, model, manufacturer, starshipClass = "starship_class"
   }
 }
 

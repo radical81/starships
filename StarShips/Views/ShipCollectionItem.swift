@@ -15,5 +15,5 @@ struct ShipCollectionItem: View {
 }
 
 #Preview {
-  ShipCollectionItem(ship: Ship(name: "Ship", model: "Mini"))
+  ShipCollectionItem(ship: Ship(name: "Ship", model: "Mini", manufacturer: "Toyota", starShipClass: "freighter"))
 }

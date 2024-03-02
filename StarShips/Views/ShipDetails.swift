@@ -19,10 +19,13 @@ struct ShipDetails: View {
   
   var body: some View {
     VStack {
-      Spacer()
       Text(viewModel.name)
         .font(.headline)
       Text(viewModel.model)
+        .font(.subheadline)
+      Text(viewModel.madeBy)
+        .font(.subheadline)
+      Text(viewModel.shipClass)
         .font(.subheadline)
       favouriteIndicator
       Spacer()
@@ -43,5 +46,5 @@ struct ShipDetails: View {
 }
 
 #Preview {
-  ShipDetails(ship: Ship(name: "Test", model: "Generic"), favourites: .constant([]))
+  ShipDetails(ship: Ship(name: "Test", model: "Generic", manufacturer: "Honda", starShipClass: "cargo"), favourites: .constant([]))
 }

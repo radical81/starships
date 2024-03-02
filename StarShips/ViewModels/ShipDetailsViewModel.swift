@@ -17,6 +17,12 @@ struct ShipDetailsViewModel {
   var model: String {
     ship.model
   }
+  var madeBy: String {
+    ship.manufacturer
+  }
+  var shipClass: String {
+    ship.starshipClass
+  }
   /// True if the ship is a favourite.
   var isFavourite: Bool {
     favourites.contains(ship)
