@@ -48,7 +48,7 @@ struct ShipCollectionList: View {
   }
   
   var listDisplay: some View {
-    NavigationSplitView {
+    NavigationStack {
       List(viewModel.ships, selection: $favourites) { ship in
         NavigationLink {
           ShipDetails(ship: ship)
@@ -64,15 +64,12 @@ struct ShipCollectionList: View {
       }
       .navigationTitle("Star Ships")
       .navigationBarTitleDisplayMode(.inline)
-    } detail: {
-      Text("Select a star ship.")
     }
   }
   
   // MARK: - Methods
   func markFavourite(_ id: UUID) -> some View {
     Button(action: {
-      print(id)
       favourites.insert(id)
     }) {
       Image(systemName: "heart.fill")
