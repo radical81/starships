@@ -115,6 +115,7 @@
 		860181C42B8F0CFF0027E948 = {
 			isa = PBXGroup;
 			children = (
+				860182122B8F15AA0027E948 /* README.md */,
 				860181CF2B8F0D000027E948 /* StarShips */,
 				860181E02B8F0D070027E948 /* StarShipsTests */,
 				860181EA2B8F0D070027E948 /* StarShipsUITests */,
@@ -147,7 +148,6 @@
 				860182192B90522C0027E948 /* ViewModels */,
 				860181D42B8F0D060027E948 /* Assets.xcassets */,
 				860181D62B8F0D060027E948 /* Preview Content */,
-				860182122B8F15AA0027E948 /* README.md */,
 			);
 			path = StarShips;
 			sourceTree = "<group>";
