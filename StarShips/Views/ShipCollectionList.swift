@@ -57,6 +57,9 @@ struct ShipCollectionList: View {
   var listDisplay: some View {
     NavigationStack {
       sortPicker
+      Text("Swipe to mark your favourite ships.")
+        .font(.callout)
+        .italic()
       List(viewModel.sortedShips) { ship in
         NavigationLink {
           ShipDetails(ship: ship, favourites: $favourites)
