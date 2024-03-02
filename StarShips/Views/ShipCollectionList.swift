@@ -12,8 +12,6 @@ struct ShipCollectionList: View {
   var viewModel: ShipCollectionViewModel {
     ShipCollectionViewModel(dataForLoading)
   }
-  /// The API service
-  let dataFetcher = StarShipRetriever()
   
   var body: some View {
     VStack(spacing: 10) {
@@ -29,7 +27,7 @@ struct ShipCollectionList: View {
     .onAppear {
       Task {
         dataForLoading = .loading
-        dataForLoading = await dataFetcher.fetchCollection()
+        dataForLoading = await Shared.DataFetcher.fetchCollection()
       }
     }
   }

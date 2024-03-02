@@ -30,6 +30,7 @@
 		860182262B92E8230027E948 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860182252B92E8230027E948 /* Storage.swift */; };
 		860182292B92E9210027E948 /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860182282B92E9210027E948 /* LocalStore.swift */; };
 		8601822B2B92EB3E0027E948 /* StoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8601822A2B92EB3E0027E948 /* StoreError.swift */; };
+		8601822D2B92EC750027E948 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8601822C2B92EC750027E948 /* Shared.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		860182252B92E8230027E948 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		860182282B92E9210027E948 /* LocalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
 		8601822A2B92EB3E0027E948 /* StoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreError.swift; sourceTree = "<group>"; };
+		8601822C2B92EC750027E948 /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 		860182072B8F12D80027E948 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				8601822C2B92EC750027E948 /* Shared.swift */,
 				8601820D2B8F143F0027E948 /* StarShipRetriever.swift */,
 			);
 			path = Services;
@@ -388,6 +391,7 @@
 				8601821F2B90B2F20027E948 /* ShipDetails.swift in Sources */,
 				860181D32B8F0D000027E948 /* HomeScreen.swift in Sources */,
 				8601820C2B8F13BC0027E948 /* Loadable.swift in Sources */,
+				8601822D2B92EC750027E948 /* Shared.swift in Sources */,
 				860182292B92E9210027E948 /* LocalStore.swift in Sources */,
 				8601822B2B92EB3E0027E948 /* StoreError.swift in Sources */,
 				860182162B8F170A0027E948 /* APIError.swift in Sources */,
