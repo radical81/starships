@@ -2,7 +2,10 @@ import Foundation
 
 /// Data structure that represents one ship.
 struct Ship: Identifiable, Codable {
-  var id: UUID = UUID()
+  /// The ID is not available from the API, so create one based on the name and model.
+  var id: String {
+    name+model.md5
+  }
   var name: String
   var model: String
   
