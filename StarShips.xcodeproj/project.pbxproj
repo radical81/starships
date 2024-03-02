@@ -32,6 +32,7 @@
 		8601822B2B92EB3E0027E948 /* StoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8601822A2B92EB3E0027E948 /* StoreError.swift */; };
 		8601822D2B92EC750027E948 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8601822C2B92EC750027E948 /* Shared.swift */; };
 		8601822F2B92F4440027E948 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8601822E2B92F4440027E948 /* StringExtension.swift */; };
+		860182312B9358A40027E948 /* SortOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860182302B9358A40027E948 /* SortOption.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		8601822A2B92EB3E0027E948 /* StoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreError.swift; sourceTree = "<group>"; };
 		8601822C2B92EC750027E948 /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
 		8601822E2B92F4440027E948 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		860182302B9358A40027E948 /* SortOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortOption.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +222,7 @@
 			children = (
 				8601820B2B8F13BC0027E948 /* Loadable.swift */,
 				860182152B8F170A0027E948 /* APIError.swift */,
+				860182302B9358A40027E948 /* SortOption.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				860182312B9358A40027E948 /* SortOption.swift in Sources */,
 				8601820E2B8F143F0027E948 /* StarShipRetriever.swift in Sources */,
 				860182212B9182DD0027E948 /* ShipDetailsViewModel.swift in Sources */,
 				8601821F2B90B2F20027E948 /* ShipDetails.swift in Sources */,

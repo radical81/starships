@@ -4,10 +4,12 @@ import Foundation
 struct ShipCollectionViewModel {
   var dataForLoading: Loadable<[Ship]>
   var favourites: [Ship]
+  var sortBy: SortOption
   
-  init(_ dataForLoading: Loadable<[Ship]>, favourites: [Ship]) {
+  init(_ dataForLoading: Loadable<[Ship]>, favourites: [Ship], sortBy: SortOption) {
     self.dataForLoading = dataForLoading
     self.favourites = favourites
+    self.sortBy = sortBy
   }
   
   // MARK: - Computed Properties
@@ -18,6 +20,15 @@ struct ShipCollectionViewModel {
       return t
     default:
       return []
+    }
+  }
+  /// The sorted array of star ships.
+  var sortedShips: [Ship] {
+    switch sortBy {
+    case .name:
+      return ships.sorted{ $0.name < $1.name }
+    case .model:
+      return ships.sorted{ $0.model < $1.model }
     }
   }
   /// True if fetching data is in progress.

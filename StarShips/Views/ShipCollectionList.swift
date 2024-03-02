@@ -2,13 +2,15 @@ import SwiftUI
 
 /// The list of ships.
 struct ShipCollectionList: View {
+  /// User selected sort option.
+  @State private var sortOption: SortOption = .name
   /// Persistent storage of favourite ships.
   @State var favourites: [Ship] = Shared.storage.favouriteShips
   /// Store the data when fetched to a state var.
   @State var dataForLoading: Loadable<[Ship]> = .notLoaded
   /// The view model will be a computed property that uses the latest data.
   var viewModel: ShipCollectionViewModel {
-    ShipCollectionViewModel(dataForLoading, favourites: favourites)
+    ShipCollectionViewModel(dataForLoading, favourites: favourites, sortBy: sortOption)
   }
   
   var body: some View {
@@ -32,7 +34,7 @@ struct ShipCollectionList: View {
   }
   
   var fetchingDisplay: some View {
-    VStack {      
+    VStack {
       Text("Fetching star ships...")
       ProgressView()
       Spacer()
@@ -45,9 +47,18 @@ struct ShipCollectionList: View {
       .foregroundColor(.red)
   }
   
+  var sortPicker: some View {
+    Picker("Sort by:", selection: $sortOption) {
+      Text("Name").tag(SortOption.name)
+      Text("Model").tag(SortOption.model)
+    }
+    .pickerStyle(.segmented)
+  }
+  
   var listDisplay: some View {
     NavigationStack {
-      List(viewModel.ships) { ship in
+      sortPicker
+      List(viewModel.sortedShips) { ship in
         NavigationLink {
           ShipDetails(ship: ship, favourites: $favourites)
         } label: {
