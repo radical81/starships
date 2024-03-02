@@ -85,6 +85,8 @@
 		8601822C2B92EC750027E948 /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
 		8601822E2B92F4440027E948 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		860182302B9358A40027E948 /* SortOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortOption.swift; sourceTree = "<group>"; };
+		860182322B935D390027E948 /* use-async-await.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "use-async-await.md"; sourceTree = "<group>"; };
+		860182332B935D780027E948 /* store-userdefaults.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "store-userdefaults.md"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +234,8 @@
 			children = (
 				860182102B8F152D0027E948 /* hide-api-implementation.md */,
 				860182112B8F154E0027E948 /* wrap-response-in-loadable.md */,
+				860182322B935D390027E948 /* use-async-await.md */,
+				860182332B935D780027E948 /* store-userdefaults.md */,
 			);
 			path = "Architecture Decisions";
 			sourceTree = "<group>";
