@@ -31,6 +31,7 @@
 		860182292B92E9210027E948 /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860182282B92E9210027E948 /* LocalStore.swift */; };
 		8601822B2B92EB3E0027E948 /* StoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8601822A2B92EB3E0027E948 /* StoreError.swift */; };
 		8601822D2B92EC750027E948 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8601822C2B92EC750027E948 /* Shared.swift */; };
+		8601822F2B92F4440027E948 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8601822E2B92F4440027E948 /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		860182282B92E9210027E948 /* LocalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
 		8601822A2B92EB3E0027E948 /* StoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreError.swift; sourceTree = "<group>"; };
 		8601822C2B92EC750027E948 /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
+		8601822E2B92F4440027E948 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				860182232B92D8D40027E948 /* ViewExtension.swift */,
+				8601822E2B92F4440027E948 /* StringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				860181FC2B8F0DFB0027E948 /* Ship.swift in Sources */,
 				860182092B8F13150027E948 /* CollectionRetriever.swift in Sources */,
 				860181D12B8F0D000027E948 /* StarShipsApp.swift in Sources */,
+				8601822F2B92F4440027E948 /* StringExtension.swift in Sources */,
 				860182242B92D8D40027E948 /* ViewExtension.swift in Sources */,
 				860182182B8F18140027E948 /* Response.swift in Sources */,
 				8601821B2B9052460027E948 /* ShipCollectionViewModel.swift in Sources */,
