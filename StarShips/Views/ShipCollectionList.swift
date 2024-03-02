@@ -2,6 +2,8 @@ import SwiftUI
 
 /// The list of ships.
 struct ShipCollectionList: View {
+  /// Edit mode binding
+  @Environment(\.editMode) private var editMode
   /// Store the data when fetched to a state var.
   @State var dataForLoading: Loadable<[Ship]> = .notLoaded
   /// Store the user favourite selections.
@@ -52,12 +54,28 @@ struct ShipCollectionList: View {
           ShipDetails(ship: ship)
         } label: {
             ShipCollectionItem(ship: ship)
+            .swipeActions {
+              markFavourite(ship.id)
+            }
+        }
+        .if(favourites.contains(ship.id)) { view in
+          view.background(Color.cyan)
         }
       }
       .navigationTitle("Star Ships")
       .navigationBarTitleDisplayMode(.inline)
     } detail: {
       Text("Select a star ship.")
+    }
+  }
+  
+  // MARK: - Methods
+  func markFavourite(_ id: UUID) -> some View {
+    Button(action: {
+      print(id)
+      favourites.insert(id)
+    }) {
+      Image(systemName: "heart.fill")
     }
   }
 }
