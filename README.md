@@ -5,4 +5,6 @@
 * Documentation comments for all structures and classes
 * Using loadable patterns for data that requires waiting
 * Async-await for asynchronous operations.
+* UserDefaults for persistent storage of simple data.
+* Extension of native structures such as View, String, and Arrays for convenience operations.
 
