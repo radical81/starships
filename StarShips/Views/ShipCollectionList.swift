@@ -8,7 +8,7 @@ struct ShipCollectionList: View {
   @State var dataForLoading: Loadable<[Ship]> = .notLoaded
   /// The view model will be a computed property that uses the latest data.
   var viewModel: ShipCollectionViewModel {
-    ShipCollectionViewModel(dataForLoading)
+    ShipCollectionViewModel(dataForLoading, favourites: favourites)
   }
   
   var body: some View {
@@ -55,7 +55,7 @@ struct ShipCollectionList: View {
         .swipeActions {
           toggleFavourite(ship)
         }
-        .if(isFavourite(ship)) { view in
+        .if(viewModel.isFavourite(ship)) { view in
           view.background(Color.cyan)
         }
       }
@@ -67,24 +67,19 @@ struct ShipCollectionList: View {
   // MARK: - Methods
   func toggleFavourite(_ ship: Ship) -> some View {
     Button(action: {
-      if isFavourite(ship) {
+      if viewModel.isFavourite(ship) {
         favourites.removeAllWithStore { $0 == ship }
       } else {
         favourites.appendWithStore(ship)
       }
     }) {
-      if isFavourite(ship) {
+      if viewModel.isFavourite(ship) {
         Image(systemName: "heart.slash") // Unmark favourite button
       } else {
         Image(systemName: "heart") // Mark favourite button
       }
     }
-  }
-  
-  /// True if the ship is a favourite.
-  func isFavourite(_ ship: Ship) -> Bool {
-    favourites.contains(ship)
-  }
+  }  
 }
 
 #Preview {

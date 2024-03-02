@@ -3,9 +3,11 @@ import Foundation
 /// Represents the data source for the ship collection view.
 struct ShipCollectionViewModel {
   var dataForLoading: Loadable<[Ship]>
+  var favourites: [Ship]
   
-  init(_ dataForLoading: Loadable<[Ship]>) {
+  init(_ dataForLoading: Loadable<[Ship]>, favourites: [Ship]) {
     self.dataForLoading = dataForLoading
+    self.favourites = favourites
   }
   
   // MARK: - Computed Properties
@@ -46,5 +48,9 @@ struct ShipCollectionViewModel {
     default: break
     }
     return "Unknown error."
+  }
+  /// True if the ship is a favourite.
+  func isFavourite(_ ship: Ship) -> Bool {
+    favourites.contains(ship)
   }
 }
